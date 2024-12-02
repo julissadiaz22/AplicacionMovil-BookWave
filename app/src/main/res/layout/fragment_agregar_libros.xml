@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/white"
+    tools:context=".FragmentAgregarLibros">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Agregar un Libro"
+        android:textSize="24sp"
+        android:textColor="#4CAF50"
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        android:layout_marginBottom="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <EditText
+                android:id="@+id/txtTitulo"
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:hint="Título del Libro"
+                android:inputType="text"
+                android:paddingStart="15dp"
+                android:background="@drawable/custom_editext"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp">
+
+                <Button
+                    android:id="@+id/btnCargarImagen"
+                    android:layout_width="0dp"
+                    android:layout_height="50sp"
+                    android:text="Cargar Portada"
+                    android:backgroundTint="#03A9F4"
+                    android:textColor="@android:color/white"
+                    android:layout_weight="3"
+                    android:textStyle="bold"/>
+
+                <!-- ImageView para mostrar la imagen seleccionada -->
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="12dp"
+                    android:contentDescription="img"
+                    android:scaleType="centerCrop"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+
+
+
+            <EditText
+                android:id="@+id/txtAutor"
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:hint="Autor del Libro"
+                android:inputType="text"
+                android:paddingStart="15dp"
+                android:background="@drawable/custom_editext"
+                android:layout_marginTop="12dp"/>
+
+            <!-- Unión de los campos de Género e ISBN -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp">
+
+                <EditText
+                    android:id="@+id/txtGenero"
+                    android:layout_width="0dp"
+                    android:layout_height="50sp"
+                    android:layout_weight="1"
+                    android:hint="Género del Libro"
+                    android:paddingStart="15dp"
+                    android:inputType="text"
+                    android:background="@drawable/custom_editext"/>
+
+                <EditText
+                    android:id="@+id/txtISBN"
+                    android:layout_width="0dp"
+                    android:layout_height="50sp"
+                    android:layout_weight="1"
+                    android:hint="ISBN"
+                    android:inputType="text"
+                    android:paddingStart="15dp"
+                    android:background="@drawable/custom_editext"
+                    android:layout_marginStart="12dp"/>
+            </LinearLayout>
+
+            <!-- Campo para Fecha de Ingreso -->
+            <EditText
+                android:id="@+id/txtFechaIngreso"
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:hint="Fecha de Ingreso"
+                android:paddingStart="15dp"
+                android:layout_marginTop="12dp"
+                android:focusable="false"
+                android:clickable="true"
+                android:background="@drawable/custom_editext"/>
+
+            <!-- Campo para cantidad -->
+            <EditText
+                android:id="@+id/txtCantidad"
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:hint="Cantidad"
+                android:inputType="number"
+                android:paddingStart="15dp"
+                android:background="@drawable/custom_editext"
+                android:layout_marginTop="12dp"/>
+
+            <EditText
+                android:id="@+id/txtDescripcion"
+                android:layout_width="match_parent"
+                android:layout_height="90sp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/custom_editext"
+                android:hint="Descripción"
+                android:inputType="textMultiLine"
+                android:minLines="3"
+                android:paddingStart="15dp" />
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp">
+
+                <Button
+                    android:id="@+id/btnActualizar"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:text="Agregar Libro"
+                    android:backgroundTint="#093C66"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:cornerRadius="15dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="6dp"/>
+
+                <Button
+                    android:id="@+id/btnRegresar"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:text="Limpiar"
+                    android:backgroundTint="#4CAF50"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:cornerRadius="15dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="6dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

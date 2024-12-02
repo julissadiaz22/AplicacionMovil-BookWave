@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn = "navigation_view">
+
+    <group
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/librosn"
+            android:title="Libros"
+
+            />
+
+        <item
+            android:id="@+id/nav_cultura"
+            android:icon="@drawable/ic_cursos"
+            android:title="Eventos"
+
+            />
+
+        <item
+            android:id="@+id/nav_perfil"
+            android:icon="@drawable/ic_perfil"
+            android:title="Ver Perfil"
+
+            />
+
+
+
+<!--
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/settings"
+            android:title="Configuración"/>-->
+
+        <item
+            android:id="@+id/nav_share"
+            android:icon="@drawable/info"
+            android:title="Manual de Usuario"/>
+
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/about"
+            android:title="Sobre Nosotros"/>
+    </group>
+    <item
+        android:title="">
+
+        <menu>
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/exiticon"
+                android:title="Cerrar Sesión"/>
+        </menu>
+
+    </item>
+
+</menu>

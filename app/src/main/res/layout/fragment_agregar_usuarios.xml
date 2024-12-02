@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/white"
+    tools:context=".FragmentAgregarUsuarios">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Agregar un Usuario"
+        android:textSize="24sp"
+        android:textColor="#4CAF50"
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        android:layout_marginBottom="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <EditText
+                android:id="@+id/txtNombreCompleto"
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:hint="Nombre Completo"
+                android:inputType="text"
+                android:paddingStart="15dp"
+                android:background="@drawable/custom_editext"/>
+
+            <EditText
+                android:id="@+id/txtNombreUsuario"
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:hint="Nombre de Usuario"
+                android:inputType="text"
+                android:paddingStart="15dp"
+                android:background="@drawable/custom_editext"
+                android:layout_marginTop="12dp"/>
+
+            <EditText
+                android:id="@+id/txtCorreoElectronico"
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:hint="Correo Electrónico"
+                android:inputType="textEmailAddress"
+                android:paddingStart="15dp"
+                android:background="@drawable/custom_editext"
+                android:layout_marginTop="12dp"/>
+
+            <EditText
+                android:id="@+id/txtContrasena"
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:hint="Contraseña"
+                android:inputType="textPassword"
+                android:paddingStart="15dp"
+                android:background="@drawable/custom_editext"
+                android:layout_marginTop="12dp"/>
+
+            <EditText
+                android:id="@+id/txtConfirmarContrasena"
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:hint="Confirmar Contraseña"
+                android:inputType="textPassword"
+                android:paddingStart="15dp"
+                android:background="@drawable/custom_editext"
+                android:layout_marginTop="12dp"/>
+
+            <!-- LinearLayout horizontal para los spinners -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp">
+
+                <!-- Spinner para Estado -->
+                <Spinner
+                    android:id="@+id/spinnerEstado"
+                    android:layout_width="0dp"
+                    android:layout_height="50sp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="6dp"
+                    android:background="@drawable/custom_editext"/>
+
+                <!-- Spinner para Rol -->
+                <Spinner
+                    android:id="@+id/spinnerRol"
+                    android:layout_width="0dp"
+                    android:layout_height="50sp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="6dp"
+                    android:background="@drawable/custom_editext"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp">
+
+                <Button
+                    android:id="@+id/btnAgregarUsuario"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:text="Agregar Usuario"
+                    android:backgroundTint="#093C66"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:cornerRadius="15dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="6dp"/>
+
+                <Button
+                    android:id="@+id/btnRegresar"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:text="Limpiar"
+                    android:backgroundTint="#4CAF50"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:cornerRadius="15dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="6dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
